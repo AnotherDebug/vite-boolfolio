@@ -1,17 +1,20 @@
 <script>
 export default {
-  name: 'ProjectCard'
+  name: 'ProjectCard',
+  props: {
+    item: Object
+  },
 }
 </script>
 
 <template>
   <div class="card m-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img :src="item.image" class="card-img-top" :alt= "item.image_original_name">
     <div class="card-body">
-      <h5 class="card-title">Name</h5>
-      <p class="card-text">Type</p>
-      <p class="card-text">Technologies</p>
-      <p class="card-text">Description</p>
+      <h5 class="card-title"><strong>Project:</strong> {{ item.name }}</h5>
+      <p class="card-text"><strong>Type:</strong> {{ item.type.name }}</p>
+      <p class="card-text"><strong>Technologies:</strong> <span v-for="technology in item.technologies" :key="technology.id">{{ item.technologies.map(tech => tech.name).join(', ') }}</span></p>
+      <p class="card-text"><strong>Description:</strong> <span v-html="item.description"></span></p>
       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 
     </div>
