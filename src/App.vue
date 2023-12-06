@@ -11,16 +11,16 @@ export default {
     Header,
     Main,
   },
-  methods:{
+  methods: {
     getApi() {
       axios.get(store.apiUrl + 'projects')
-      .then(res => {
-        store.projectsList = res.data;
-        console.log(store.projectsList);
-      })
-      .catch(e => {
-        console.log(e);
-      });
+        .then(res => {
+          store.projectsList = res.data;
+          console.log(store.projectsList);
+        })
+        .catch(e => {
+          console.log(e);
+        });
     },
   },
   mounted() {
@@ -31,10 +31,10 @@ export default {
 
 <template>
 
-<Header/>
+  <Header />
 
-<Main/>
-
+  <Main />
+  
 </template>
 
 <style lang="scss">
