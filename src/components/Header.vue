@@ -5,8 +5,18 @@ export default {
 </script>
 
 <template>
-  <h1>Header</h1>
+  <header>
+    <h1>Projects List</h1>
+  </header>
 </template>
 
 <style lang="scss" scoped>
+@use "../scss/partials/variables" as *;
+header {
+  background-color: $gray-color;
+  h1 {
+  text-align: center;
+  padding: 30px;
+}
+}
 </style>
