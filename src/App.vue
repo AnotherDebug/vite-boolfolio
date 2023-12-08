@@ -15,7 +15,7 @@ export default {
     getApi() {
       axios.get(store.apiUrl + 'projects')
         .then(res => {
-          store.projectsList = res.data;
+          store.projectsList = res.data.data;
           console.log(store.projectsList);
         })
         .catch(e => {
