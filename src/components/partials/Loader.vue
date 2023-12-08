@@ -6,7 +6,7 @@ export default {
 
 
 <template>
-    <div class="loading">
+    <div class="loading d-flex flex-column align-items-center justify-content-center">
         <h1>Loading....</h1>
 
         <span class="loader"></span>
@@ -18,10 +18,7 @@ export default {
 
 @use '../../scss/partials/variables' as *;
 
-.loading {
-
-    padding-left: 50px;
-    padding-top: 100px;
+.loading {   
 
     h1 {
         
@@ -30,7 +27,7 @@ export default {
 
     height: 100vh;
 
-    background-image: url('../../../public/yu_gi_oh__the_dark_side_of_dimensions_wallpaper_2_by_maxiuchiha22_de1i1ur-414w-2x.jpg');
+    background-image: url('/public/img/istockphoto-1224500457-612x612.jpg');
 
     background-size: contain;
 
@@ -41,8 +38,8 @@ export default {
     background-position: 50% 0;
 
     .loader {
-        width: 250px;
-        height: 4.8px;
+        width: 350px;
+        height: 12px;
         display: inline-block;
         background: rgba(255, 255, 255, 0.15);
         position: relative;
@@ -52,7 +49,7 @@ export default {
     .loader::after {
         content: '';
         width: 0%;
-        height: 4.8px;
+        height: 12px;
         background-color: #9f2a2a;
         background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25) 75%, transparent 75%, transparent);
         background-size: 30px 30px;
