@@ -18,6 +18,8 @@ export default {
 <template>
   <main class="container">
 
+    <h1 class="text-center">I miei progetti</h1>
+
     <div class="row p-5">
       <div class="col d-flex  flex-wrap ">
 
