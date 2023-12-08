@@ -23,17 +23,12 @@ export default {
     <div class="row p-5">
       <div class="col d-flex  flex-wrap ">
 
-        <ProjectCard
-        v-for="card in store.projectsList"
-        :key="card.id"
-        :item="card"
-        />
+        <ProjectCard v-for="card in store.projectsList" 
+          :key="card.id" 
+          :item="card" />
 
       </div>
     </div>
-
-
-    
 
   </main>
 </template>
