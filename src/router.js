@@ -4,6 +4,7 @@ import About from "./pages/About.vue"
 import Projects from "./pages/Projects.vue"
 import Contacts from "./pages/Contacts.vue"
 import Error404 from "./pages/Error404.vue"
+import Details from "./pages/Details.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -28,6 +29,11 @@ const router = createRouter({
       path: "/contatti",
       name: "contacts",
       component: Contacts
+    },
+    {
+      path: "/dettagli",
+      name: "details",
+      component: Details
     },
     //Ultima rotta
     //:pathMatch(.*)*   (tutte le rotte possibili, quindi intercetta tutte le rotte sbagliate ad eccezione di quelle precedenti)

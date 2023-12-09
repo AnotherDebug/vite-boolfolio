@@ -56,7 +56,7 @@ components: {
 
 
 <template>
-  <h1>Projects</h1>
+
   <Loader v-if="!isLoaded" />
 
   <Main v-else />
@@ -68,5 +68,7 @@ components: {
 
 
 <style lang="scss" scoped>
-
+.container {
+  margin-top: 30px;
+}
 </style>
