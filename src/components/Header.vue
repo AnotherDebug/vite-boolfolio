@@ -5,8 +5,21 @@ export default {
 </script>
 
 <template>
-  <header>
-    <h1>Projects List</h1>
+  <header class="container">
+    <ul class="nav">
+  <li class="nav-item">
+    <router-link class="nav-link" :to="{ name: 'home' }">Home</router-link>
+  </li>
+  <li class="nav-item">
+    <router-link class="nav-link" :to="{ name:'about' }">About</router-link>
+  </li>
+  <li class="nav-item">
+    <router-link class="nav-link" :to="{ name:'projects' }">Projects</router-link>
+  </li>
+  <li class="nav-item">
+    <router-link class="nav-link" :to="{ name:'contacts' }">Contacts</router-link>
+  </li>
+</ul>
   </header>
 </template>
 
@@ -14,12 +27,6 @@ export default {
 @use "../scss/partials/variables" as *;
 
 header {
-  background-color: $gray-color;
- 
-  h1 {
-    text-align: center;
-    padding-top: 30px;
-    height: 120px;
-  }
+margin-top: 20px;
 }
 </style>

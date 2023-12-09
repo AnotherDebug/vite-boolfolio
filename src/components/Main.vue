@@ -5,7 +5,7 @@ import { store } from '../data/store'
 export default {
   name: 'Main',
   components: {
-    ProjectCard
+    ProjectCard,
   },
   data() {
     return {
