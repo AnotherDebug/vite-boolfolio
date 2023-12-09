@@ -30,8 +30,9 @@ const router = createRouter({
       name: "contacts",
       component: Contacts
     },
+    //rotta dinamica con parametro slug
     {
-      path: "/dettagli",
+      path: "/dettagli/:slug",
       name: "details",
       component: Details
     },

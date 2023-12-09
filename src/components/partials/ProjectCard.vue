@@ -19,7 +19,7 @@ export default {
           v-for="technology in item.technologies"
           :key="technology.id">{{ item.technologies.map(tech => tech.name).join(', ') }}</span>
       </p> -->
-      <router-link :to="{ name: 'details' }" class="btn btn-primary">Details <i class="fa-solid fa-square-arrow-up-right fa-rotate-90"></i></router-link>
+      <router-link :to="{ name: 'details', params:{ slug: item.slug } }" class="btn btn-primary">Details <i class="fa-solid fa-square-arrow-up-right fa-rotate-90"></i></router-link>
 
     </div>
   </div>
