@@ -22,13 +22,28 @@ export default {
   },
   methods: {
     getApi(endpoint) {
+      this.isLoaded = false;
       axios.get(endpoint)
         .then(res => {
           this.isLoaded = true;
+          //chiamata API di projectList
           store.projectsList = res.data.data;
           console.log(store.projectsList);
-          store.links = res.data.links;
-          console.log(store.links);
+          //chiamata API links dell'oggetto paginator
+          store.paginator.links = res.data.links;
+          console.log(store.paginator.links);
+          //chiamata API firstPageUrl dell'oggetto paginator
+          store.paginator.firstPageUrl = res.data.first_page_url;
+          console.log(store.paginator.firstPageUrl);
+          //chiamata API lastPageUrl dell'oggetto paginator
+          store.paginator.lastPageUrl = res.data.last_page_url;
+          console.log(store.paginator.lastPageUrl);
+          //chiamata API currentPage dell'oggetto paginator
+          store.paginator.currentPage = res.data.current_page;
+          console.log(store.paginator.currentPage);
+          //chiamata API lastPage dell'oggetto paginator
+          store.paginator.lastPage = res.data.last_page;
+          console.log(store.paginator.lastPage);
         })
         .catch(e => {
           console.log(e);
@@ -46,8 +61,8 @@ export default {
 
   <Main v-else />
   <Navigator 
-    :links="links"
-    @callApi="getApi"/>
+    @callApi="getApi"
+  />
 </template>
 
 <style lang="scss">
