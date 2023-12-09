@@ -32,18 +32,22 @@ export default {
 
 <template>
     <div class="container">
-        <h1>Details</h1>
-        <div class="card mb-3" style="max-width: 540px;">
+        <h1 class="text-center mb-5">Project Details</h1>
+        <div class="card mb-3 m-auto" style="max-width: 900px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
+                    <img :src="project.image" class="rounded-start w-100 object-fit-cover" :alt="project.image_original_name">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title"><strong>Title: </strong>{{ project.name }}</h5>
+                        <p class="card-text"><strong>Date start: </strong>{{ project.date_start }}</p>
+                        <p class="card-text"><strong>Type:</strong> {{ project.type?.name }}</p>
+                        <p class="card-text"><strong>Technologies:</strong> <span 
+                            v-for="technology in project.technologies"
+                            :key="technology.id">{{ project.technologies.map(tech => tech.name).join(', ') }}</span>
+                        </p>
+                        <p class="card-text"><strong>Description: </strong><span v-html="project.description"></span></p>
                     </div>
                 </div>
             </div>
