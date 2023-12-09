@@ -30,7 +30,7 @@ const router = createRouter({
       component: Contacts
     },
     //Ultima rotta
-    //:pathMatch(.*)*   (tutte le rotte possibili, quindi intercetta tutte le rotte sbagliate ad eccezione di quele precedenti)
+    //:pathMatch(.*)*   (tutte le rotte possibili, quindi intercetta tutte le rotte sbagliate ad eccezione di quelle precedenti)
     {
       path: "/:pathMatch(.*)*",
       name: "error404",

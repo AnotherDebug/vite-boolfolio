@@ -4,6 +4,7 @@ export default {
   props: {
     item: Object,
   },
+  
 }
 </script>
 
