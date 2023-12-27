@@ -1,6 +1,12 @@
 <script>
+
+import ContactForm from '../components/partials/ContactForm.vue';
+
 export default {
-name: 'Contacts',
+  name: 'Contacts',
+  components: {
+    ContactForm,
+  },
 }
 </script>
 
@@ -8,20 +14,7 @@ name: 'Contacts',
 <template>
   <div class="container">
     <h1>Contacts</h1>
-    <ul>
-      <li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum commodi libero iste unde labore dignissimos, at quae sint ipsa nisi dolores fuga, odit consequatur facere laudantium. Pariatur quae quidem dicta.</p>
-      </li>
-      <li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum commodi libero iste unde labore dignissimos, at quae sint ipsa nisi dolores fuga, odit consequatur facere laudantium. Pariatur quae quidem dicta.</p>
-      </li>
-      <li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum commodi libero iste unde labore dignissimos, at quae sint ipsa nisi dolores fuga, odit consequatur facere laudantium. Pariatur quae quidem dicta.</p>
-      </li>
-      <li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum commodi libero iste unde labore dignissimos, at quae sint ipsa nisi dolores fuga, odit consequatur facere laudantium. Pariatur quae quidem dicta.</p>
-      </li>
-    </ul>
+    <ContactForm />
   </div>
 </template>
 

@@ -8,7 +8,7 @@ export default {
         return {
             store,
             slug: '',
-            project: '',
+            project: {},
         }
     },
     methods: {
